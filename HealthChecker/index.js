@@ -18,7 +18,7 @@ $(document).ready(function () {
 });
 function Curl() {
     $.ajax({
-        url: 'http://localhost/HealthChecker/curl.php?url=' + $('#url').val(),
+        url: 'http://localhost/dntukadiya/HealthChecker/curl.php?url=' + $('#url').val(),
         type: 'GET',
         cache: false,
         success: function (response) {
