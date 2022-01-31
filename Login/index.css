@@ -4,7 +4,7 @@
 body 
 {
     background:linear-gradient(to bottom, blue,black);
-    background-size: 100% 100vh !important;
+    background-size: 100vh !important;
     background-attachment: fixed;
 }
 .login-block
