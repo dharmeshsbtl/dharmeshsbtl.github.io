@@ -1,0 +1,138 @@
+/* body{
+    background:linear-gradient( blue,black);
+} */
+body 
+{
+    background:linear-gradient(to bottom, blue,black);
+    background-size: 100% 100vh !important;
+    background-attachment: fixed;
+}
+.login-block
+{
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50px;
+}
+input
+{
+    width: 100%;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    text-align: left;
+    border-radius: 50px;
+    border: 1px solid white;
+    padding: 10px 0 10px 40px;
+    outline: none;
+}
+/* input:hover, input:focus
+{
+    padding: 2.5px;
+    font-size: 26px;
+    background: linear-gradient(to bottom, yellow,white);
+} */
+.CssSelectors
+{
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+    border: white 2px solid;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    width: auto;
+}
+.InpFontSize
+{
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 10%;
+    padding: 10px;
+    margin-right: 10px;
+    border: white 2px solid;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+}
+.CredentialsErr
+{
+    border: 3px solid red;
+}
+#LoginMsg
+{
+    color: green;
+    font-size: 20px;
+}
+#UidErrMsg,#PswdErrMsg
+{
+    color: red;
+    font-size: 16px;
+}
+#loginuserform a
+{
+    color: gray;
+}
+#loginuserform a:hover
+{
+    color: white;
+}
+#login
+{
+    font-weight: bolder;
+    width: 100%;
+    background-color: rgb(68, 68, 161);
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 2px solid white;
+    outline: none;
+}
+#login:hover,#login:focus
+{
+    font-weight: bolder;
+    width: 100%;
+    background-color:#100562;
+    padding: 6.25px;
+    color: yellow;
+    font-size: 23px;
+    border: 2px solid white;
+    transition:background-color 0.8s, color 0.8s;
+}
+.loginform
+{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 48px;
+    font-weight: bolder;
+}
+.loginform:hover
+{
+    color: goldenrod;
+}
+.credentials
+{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 36px;
+    font-weight: bolder;
+}
+.credentials:hover
+{
+    color: goldenrod;
+}
+.copyright
+{
+    color: gray;
+}
+.iicon
+{
+    position: absolute;
+    color: black;
+    padding: 11px 17px;
+}
+.gender-radio input[type=radio], input[type=checkbox]
+{
+    width: auto;
+}

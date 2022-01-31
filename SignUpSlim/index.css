@@ -1,0 +1,96 @@
+.Invalid
+{
+    color: red;
+}
+/* #signupmodal { overflow-y: scroll !important;} */
+/* td
+{
+    word-break:break-all;
+} */
+.ActivePageBtn
+{
+    background-color: black;
+    color: white;
+}
+.ActivePageBtn:focus
+{
+    background-color: black;
+    color: white;
+}
+#QTblFlds
+{
+    padding: 5px;
+    width: 100%;
+    outline: none;
+    border: 1px blue solid;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+[name=SrtAsc],[name=SrtDesc]
+{
+    display: flex;
+}
+#MsgModal
+{
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    border-radius: 10px;
+    background: orange;
+    width: 300px;
+    height: auto;
+}
+.M-close
+{
+    color: #fefefe;
+    background:#333333d9 ;
+    float: right;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 50%;
+    text-align: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: absolute;
+    top: -13px;
+    right: -11px;
+
+
+}
+.M-header
+{
+    font-size:larger;
+    text-align: center;
+    background: chartreuse;
+    border-radius: 10px;
+}
+.M-body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.MsgBody
+{
+    padding: 5px;
+    font-size: medium;
+}
+#logout
+{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+.colheading
+{
+    display: flex;
+}
+.fa-arrow-up,.fa-arrow-down
+{
+    height: 20px;
+}
