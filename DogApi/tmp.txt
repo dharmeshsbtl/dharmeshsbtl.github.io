@@ -1,0 +1,9 @@
+curl headers
+javscript debug
+server side validation
+sql injection
+
+composer
+github
+ftp
+file zilla
