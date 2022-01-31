@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $.ajax({
-        url:'curl.php',
+        url:'https://dog.ceo/api/breeds/image/random',
+//         url:'curl.php',
         type:'GET',
         success:function(response){
             response=JSON.parse(response);
