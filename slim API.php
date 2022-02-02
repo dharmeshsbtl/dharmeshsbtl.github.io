@@ -26,6 +26,18 @@ $app->post('/SignUp', function ($request, $response) {
         $Arr=array('uid'=>$uid,'fname'=>$v1,'lname'=>$v2,'email'=>$v3,'mnumber'=>$v4,'dob'=>$v5,'gender'=>$v6,'hobbies'=>$v7,'city'=>$v8,'state'=>$v9,'zip'=>$v10,'description'=>$v11);
         // $db->query("INSERT INTO `user` (uid,fname,lname,email,mnumber,dob,gender,hobbies,city,state,zip,description) VALUES ('$uid','$v1','$v2','$v3','$v4','$v5','$v6','$v7','$v8','$v9','$v10','$v11')");
         $db->insert('user',$Arr);
+        
+        
+        // $directory = $this->get('upload_directory');
+        // $files=$request->getUploadedFiles();
+        // $file=$files['pimage'];
+        $FilePath = $this->get('upload_directory'). $uid . ".png";
+        if(file_exists($FilePath)){
+            unlink($FilePath);
+        }
+        // move_uploaded_file($file->file,$FilePath);
+        move_uploaded_file($request->getUploadedFiles()['pimage']->file,$FilePath);
+        // $file->moveTo($directory.$file->getClientFile());
         return $response->withJson(array('status'=>'success'));
     }
     elseif($params['type']=="Edit")
@@ -46,6 +58,16 @@ $app->post('/SignUp', function ($request, $response) {
         $Arr=array('fname'=>$v1,'lname'=>$v2,'email'=>$v3,'mnumber'=>$v4,'dob'=>$v5,'gender'=>$v6,'hobbies'=>$v7,'city'=>$v8,'state'=>$v9,'zip'=>$v10,'description'=>$v11);
         // $db->query("UPDATE `user` SET fname='$v1', lname='$v2', email='$v3', mnumber='$v4', dob='$v5', gender='$v6', hobbies='$v7', city='$v8', state='$v9', zip='$v10', description='$v11' WHERE `uid`='".$params['id']."'");
         $db->update('user',$Arr,array('uid'=>$params['id']));
+        // $directory = $this->get('upload_directory');
+        // $files=$request->getUploadedFiles();
+        // $file=$files['pimage'];
+        $FilePath = $this->get('upload_directory'). $params['id'] . ".png";
+        if(file_exists($FilePath)){
+            unlink($FilePath);
+        }
+        // move_uploaded_file($file->file,$FilePath);
+        move_uploaded_file($request->getUploadedFiles()['pimage']->file,$FilePath);
+        // $file->moveTo($directory.$file->getClientFile());
         return $response->withJson(array('status'=>'success'));
     }
     elseif($params['type']=="Delete")
@@ -53,6 +75,10 @@ $app->post('/SignUp', function ($request, $response) {
         $db = connectdb();
         // $db->query("DELETE FROM `user` WHERE `uid`='".$params['id']."'");
         $db->delete('user',array('uid'=>$params['id']));
+        $FilePath = $this->get('upload_directory'). $params['id'] . ".png";
+        if(file_exists($FilePath)){
+            unlink($FilePath);
+        }
         return $response->withJson(array('status'=>'success'));
     }
     elseif($params['type']=="BulkDelete")
@@ -61,6 +87,10 @@ $app->post('/SignUp', function ($request, $response) {
         $sql="DELETE FROM `user` WHERE `uid` IN (";
         for($i=0;$i<sizeof($DelArr);$i++)
         {
+            $FilePath = $this->get('upload_directory'). $DelArr[$i] . ".png";
+            if(file_exists($FilePath)){
+                unlink($FilePath);
+            }   
             if($i==sizeof($DelArr)-1)
             {
                 $sql.="'".$DelArr[$i]."'";
